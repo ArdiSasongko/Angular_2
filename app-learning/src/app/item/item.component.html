@@ -1,0 +1,29 @@
+<div class="container">
+    <p>item works!</p>
+    <div *ngFor="let item of items">
+        <mat-card>
+            <mat-card-title>
+                {{item.name}}
+            </mat-card-title>
+            <mat-card-subtitle>
+                {{item.id}} | {{item.age}} | {{item.gender}}
+            </mat-card-subtitle>
+            <mat-card-actions>
+                <button (click)="onDetail()">Detail</button>
+            </mat-card-actions>
+            <div *ngIf="detail">
+                <mat-card-content>
+                    <p>
+                        {{item.profession}} <br>
+                        {{item.martialStatus}}
+                    </p>
+                    <b>
+                        {{item.address.city}},
+                        {{item.address.country}},
+                        [{{item.address.zipcode}}]
+                    </b>
+                </mat-card-content>
+            </div>
+        </mat-card>
+    </div>
+</div>

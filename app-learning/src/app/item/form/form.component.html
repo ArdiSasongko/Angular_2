@@ -1,0 +1,67 @@
+<p>form works!</p>
+<div class="row">
+    <div class="col-sm-2">
+        <div class="col-sm-8">
+            <mat-card>
+                <mat-card-title>
+                    Add User
+                </mat-card-title>
+                <mat-card-content>
+                    <form [formGroup]="userForm"></form>
+                    <div class="row mt-3">
+                        <div class="col-sm-6">
+                            <mat-form-field appearance="legacy">
+                                <mat-label>id</mat-label>
+                                <input matInput formControlName="id">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-form-field appearance="legacy">
+                                <mat-label>name</mat-label>
+                                <input matInput formControlName="name">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <mat-form-field appearance="legacy">
+                                <mat-label>Age</mat-label>
+                                <input matInput formControlName="age">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-label>Gender</mat-label>
+                            <mat-radio-group formControlName="gender">
+                                <mat-radio-button value="Male">
+                                    Male
+                                </mat-radio-button>
+                                <mat-radio-button value="Female">
+                                    Female
+                                </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                          <mat-form-field appearance="legacy">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="email" placeholder=" ">
+                            <mat-hint>Hint</mat-hint>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                          <mat-form-field appearance="fill">
+                            <mat-label>profession</mat-label>
+                            <mat-select formControlName="profession">
+                              <mat-option value="Worker">Worker</mat-option>
+                              <mat-option value="Student">Student</mat-option>
+                              <mat-option value="Freelancer">Freelancer</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
