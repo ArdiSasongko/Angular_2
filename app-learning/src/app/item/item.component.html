@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-start flex-wrap">
+        <ng-container *ngFor="let itm of item; let indexelement = index">
+            <div class="px-2 py-2">
+                <mat-card class="card">
+                    <mat-card-header>
+                        <mat-card-title>{{itm.name}}</mat-card-title>
+                        <mat-card-subtitle>{{itm.id}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image class="img" src="{{itm.img}}" alt="Gambar {{itm.name}}">
+                    <strong>Rp.{{itm.price}}</strong>
+                    <mat-card-actions>
+                        <button mat-button (click)="detail(indexelement)">Description</button>
+                        <button mat-button (click)="onCart()">Add</button>
+                    </mat-card-actions>
+                    <ng-container *ngIf="btn[indexelement]">
+                        <div class="container">
+                            {{itm.desc}}
+                        </div>
+                    </ng-container>
+                </mat-card>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+
