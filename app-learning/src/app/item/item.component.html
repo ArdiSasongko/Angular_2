@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <ng-container *ngFor="let breads of breads">
+        <mat-card class="cards">
+            <mat-card-header>
+                <mat-card-title>{{breads.name}}</mat-card-title>
+                <mat-card-subtitle>{{breads.id}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions>
+                <button mat-button routerLink="/item/{{breads.id}}">Details</button>
+                <button mat-button (click)="add()">Add</button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+</div>

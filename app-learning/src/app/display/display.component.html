@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <ng-container *ngIf="display && display.items.length">
+        <ng-container *ngFor="let disp of display.items">
+            <mat-list role="list">
+                <mat-list-item>
+                    {{disp.breads.name}}
+                    Quantity :
+                    <mat-slider min="0" max="10" step="10" 
+                    #quantity [value]="'disp.quantity'" (change)="'changeQuantity(disp, quantity.value'">
+                        <input matSliderThumb>
+                    </mat-slider>
+                    <div>
+                        {{disp.price}}
+                    </div>
+                    <button mat-button (click)="removeDisp(disp)">
+                        Remove
+                    </button>
+                </mat-list-item>
+            </mat-list>
+            <mat-card>
+                <mat-card-content>
+                    <p>Total : {{display.totalCount}}</p>
+                    <p>Price : {{display.totalPrice}}</p>
+                </mat-card-content>
+            </mat-card>
+        </ng-container>
+    </ng-container>
+</div>

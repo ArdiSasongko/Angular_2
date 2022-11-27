@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <ng-container *ngIf="breads.id">
+        <mat-tab-group>
+            <mat-tab label="Description">
+                <p>Title :{{breads.name}}</p>
+            </mat-tab>
+            <mat-tab label="Inggredients">
+                <p>Description :</p><br>
+                <strong>{{breads.desc}}</strong>
+            </mat-tab>
+        </mat-tab-group>
+        <button mat-button routerLink="/item">Back</button>
+    </ng-container>
+</div>
